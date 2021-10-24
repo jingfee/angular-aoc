@@ -1,0 +1,128 @@
+{
+  "version": 1,
+  "projects": {
+    "angular-advent-of-code": {
+      "projectType": "application",
+      "root": "apps/angular-advent-of-code",
+      "sourceRoot": "apps/angular-advent-of-code/src",
+      "prefix": "jingfee",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:browser",
+          "outputs": ["{options.outputPath}"],
+          "options": {
+            "outputPath": "dist/apps/angular-advent-of-code",
+            "index": "apps/angular-advent-of-code/src/index.html",
+            "main": "apps/angular-advent-of-code/src/main.ts",
+            "polyfills": "apps/angular-advent-of-code/src/polyfills.ts",
+            "tsConfig": "apps/angular-advent-of-code/tsconfig.app.json",
+            "inlineStyleLanguage": "scss",
+            "assets": [
+              "apps/angular-advent-of-code/src/favicon.ico",
+              "apps/angular-advent-of-code/src/assets"
+            ],
+            "styles": ["apps/angular-advent-of-code/src/styles.scss"],
+            "scripts": []
+          },
+          "configurations": {
+            "production": {
+              "budgets": [
+                {
+                  "type": "initial",
+                  "maximumWarning": "500kb",
+                  "maximumError": "1mb"
+                },
+                {
+                  "type": "anyComponentStyle",
+                  "maximumWarning": "2kb",
+                  "maximumError": "4kb"
+                }
+              ],
+              "fileReplacements": [
+                {
+                  "replace": "apps/angular-advent-of-code/src/environments/environment.ts",
+                  "with": "apps/angular-advent-of-code/src/environments/environment.prod.ts"
+                }
+              ],
+              "outputHashing": "all"
+            },
+            "development": {
+              "buildOptimizer": false,
+              "optimization": false,
+              "vendorChunk": true,
+              "extractLicenses": false,
+              "sourceMap": true,
+              "namedChunks": true
+            }
+          },
+          "defaultConfiguration": "production"
+        },
+        "serve": {
+          "builder": "@angular-devkit/build-angular:dev-server",
+          "configurations": {
+            "production": {
+              "browserTarget": "angular-advent-of-code:build:production"
+            },
+            "development": {
+              "browserTarget": "angular-advent-of-code:build:development"
+            }
+          },
+          "defaultConfiguration": "development"
+        },
+        "extract-i18n": {
+          "builder": "@angular-devkit/build-angular:extract-i18n",
+          "options": {
+            "browserTarget": "angular-advent-of-code:build"
+          }
+        },
+        "lint": {
+          "builder": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": [
+              "apps/angular-advent-of-code/src/**/*.ts",
+              "apps/angular-advent-of-code/src/**/*.html"
+            ]
+          }
+        },
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "outputs": ["coverage/apps/angular-advent-of-code"],
+          "options": {
+            "jestConfig": "apps/angular-advent-of-code/jest.config.js",
+            "passWithNoTests": true
+          }
+        }
+      },
+      "tags": []
+    },
+    "angular-advent-of-code-e2e": {
+      "root": "apps/angular-advent-of-code-e2e",
+      "sourceRoot": "apps/angular-advent-of-code-e2e/src",
+      "projectType": "application",
+      "architect": {
+        "e2e": {
+          "builder": "@nrwl/cypress:cypress",
+          "options": {
+            "cypressConfig": "apps/angular-advent-of-code-e2e/cypress.json",
+            "devServerTarget": "angular-advent-of-code:serve:development",
+            "tsConfig": "apps/angular-advent-of-code-e2e/tsconfig.json"
+          },
+          "configurations": {
+            "production": {
+              "devServerTarget": "angular-advent-of-code:serve:production"
+            }
+          }
+        },
+        "lint": {
+          "builder": "@nrwl/linter:eslint",
+          "outputs": ["{options.outputFile}"],
+          "options": {
+            "lintFilePatterns": ["apps/angular-advent-of-code-e2e/**/*.{js,ts}"]
+          }
+        }
+      },
+      "tags": [],
+      "implicitDependencies": ["angular-advent-of-code"]
+    }
+  }
+}
