@@ -7,6 +7,7 @@ import {
 } from '@ngneat/cashew';
 
 import { AppComponent } from './app.component';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [AppComponent],
@@ -14,6 +15,7 @@ import { AppComponent } from './app.component';
     BrowserModule,
     HttpClientModule,
     HttpCacheInterceptorModule.forRoot(),
+    FormsModule,
   ],
   providers: [useHttpCacheLocalStorage],
   bootstrap: [AppComponent],

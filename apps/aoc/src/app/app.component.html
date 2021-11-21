@@ -1,2 +1,37 @@
-<button (click)="sendAnswer()">Skicka svar</button>
-<p *ngIf="result$ | async as result">{{ result }}</p>
+<div class="max-w-screen-lg mx-auto px-4">
+  <p class="text-lg text-white font-bold">
+    Advent of Code 2021 solver built with Angular
+  </p>
+  <div class="block my-5">
+    <select
+      class="
+        w-24
+        border-0
+        bg-gray-900
+        text-white
+        border-b-2 border-yellow-600
+        focus:ring-0 focus:border-yellow-600
+      "
+      [(ngModel)]="selectedDay"
+    >
+      <option *ngFor="let day of currentSolvers">
+        {{ day }}
+      </option>
+    </select>
+  </div>
+
+  <button
+    (click)="solve(1)"
+    class="py-2 px-3 mt-4 mr-4 bg-yellow-600 text-white"
+    [disabled]="!selectedDay"
+  >
+    Solve part 1
+  </button>
+  <button
+    (click)="solve(2)"
+    class="py-2 px-3 mt-4 ml-4 bg-yellow-600 text-white"
+    [disabled]="!selectedDay"
+  >
+    Solve part 2
+  </button>
+</div>
