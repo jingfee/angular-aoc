@@ -1,5 +1,5 @@
 {
-  "npmScope": "jingfee",
+  "npmScope": "angular-aoc",
   "affected": {
     "defaultBase": "main"
   },
@@ -16,9 +16,11 @@
   },
   "tasksRunnerOptions": {
     "default": {
-      "runner": "@nrwl/workspace/tasks-runners/default",
+      "runner": "@nrwl/nx-cloud",
       "options": {
-        "cacheableOperations": ["build", "lint", "test", "e2e"]
+        "cacheableOperations": ["build", "lint", "test", "e2e"],
+        "accessToken": "YjA0YTMwNTAtNWVkYS00OGJmLTg4MGItM2M1MGE1ZGU0YjZhfHJlYWQtd3JpdGU=",
+        "parallel": 1
       }
     }
   },
@@ -46,5 +48,5 @@
       "style": "scss"
     }
   },
-  "defaultProject": "angular-advent-of-code"
+  "defaultProject": "aoc"
 }
