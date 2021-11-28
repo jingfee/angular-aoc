@@ -24,6 +24,7 @@ specifiers:
   '@nestjs/testing': ^8.0.0
   '@ngneat/cashew': ^2.3.2
   '@ngneat/spectator': ^9.0.0
+  '@ngneat/until-destroy': ^9.0.0
   '@nrwl/angular': 13.2.1
   '@nrwl/cli': 13.2.1
   '@nrwl/eslint-plugin-nx': 13.2.1
@@ -67,6 +68,7 @@ dependencies:
   '@nestjs/core': 8.2.2_9db648ac67ddf45af580ea1e24f70cd7
   '@nestjs/platform-express': 8.2.2_85c4c0e028995b7d710082e2a98cc178
   '@ngneat/cashew': 2.3.2_@angular+core@13.0.2
+  '@ngneat/until-destroy': 9.0.0_@angular+core@13.0.2+rxjs@7.4.0
   '@nrwl/angular': 13.2.1_bc4d034640ef0208dd45731c0178e70c
   reflect-metadata: 0.1.13
   rxjs: 7.4.0
@@ -2260,6 +2262,17 @@ packages:
       replace-in-file: 6.2.0
       tslib: 2.3.1
     dev: true
+
+  /@ngneat/until-destroy/9.0.0_@angular+core@13.0.2+rxjs@7.4.0:
+    resolution: {integrity: sha512-6NJNJJIIr9qo3fTDI6yeLAKmyvbS1gV0PynIT0ofktq5L4BehlGGxCextcfh2uIltx+fhj9TYpC7ndwnD/3RPA==}
+    peerDependencies:
+      '@angular/core': '>=13'
+      rxjs: ^6.4.0 || ^7.0.0
+    dependencies:
+      '@angular/core': 13.0.2_rxjs@7.4.0+zone.js@0.11.4
+      rxjs: 7.4.0
+      tslib: 2.3.1
+    dev: false
 
   /@ngtools/webpack/13.0.2_110f3de08bc61409c48dc95bfe09606a:
     resolution: {integrity: sha512-eCtPydszVvKtkvL4HeDMvWC3IqTF/xZF6CTumMweRNInc6mTZiwwLwLDk8pg3xVp3ttZUOwV17BUnEs4/Q4qMA==}
