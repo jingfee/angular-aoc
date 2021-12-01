@@ -9,9 +9,9 @@ import { Status } from '../models/status.model';
   providedIn: 'root',
 })
 export class AocClientService {
-  canSubmit = true;
-  delayStart = 0;
-  delayAmount = 0;
+  private canSubmit = true;
+  private delayStart = 0;
+  private delayAmount = 0;
 
   constructor(private http: HttpClient) {}
 
@@ -55,7 +55,7 @@ export class AocClientService {
           .parseFromString(response.data, 'text/html')
           .querySelector('main');
 
-        let status = Status['ERROR'];
+        let status = Status.ERROR;
 
         const info =
           $main !== null
@@ -64,11 +64,11 @@ export class AocClientService {
 
         if (info.includes("That's the right answer")) {
           console.log(`Status PART ${part} SOLVED!`);
-          return Status['SOLVED'];
+          return Status.SOLVED;
         } else if (info.includes("That's not the right answer")) {
           console.log('Status: WRONG ANSWER');
           console.log(`\n${info}\n`);
-          status = Status['WRONG'];
+          status = Status.WRONG;
         } else if (info.includes('You gave an answer too recently')) {
           console.log('Status: TO SOON');
         } else if (
