@@ -8,6 +8,10 @@ export class UtilService {
     return input.split(', ');
   }
 
+  rowInputToStringArray(input: string): string[] {
+    return input.split('\n');
+  }
+
   rowInputToNumberArray(input: string): number[] {
     return input.split('\n').map((i) => Number.parseInt(i));
   }

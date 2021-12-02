@@ -25,7 +25,11 @@
         name="part"
         value="1"
         [(ngModel)]="selectedPart"
-        (change)="solveStatus = undefined; testStatus = undefined"
+        (change)="
+          solveStatus = undefined;
+          testStatus = undefined;
+          runningTime = undefined
+        "
       />
       <span class="ml-2 text-white">Part 1</span>
     </label>
@@ -36,7 +40,11 @@
         name="part"
         value="2"
         [(ngModel)]="selectedPart"
-        (change)="solveStatus = undefined; testStatus = undefined"
+        (change)="
+          solveStatus = undefined;
+          testStatus = undefined;
+          runningTime = undefined
+        "
       />
       <span class="ml-2 text-white">Part 2</span> </label
     >"
@@ -226,7 +234,7 @@
     </button>
   </div>
   <div class="block" *ngIf="runningTime">
-    Solver running time:
+    <span class="text-white">Solver running time: </span>
     <span class="text-white">{{ runningTime | number: '1.0-3' }}</span>
   </div>
 </div>

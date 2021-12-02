@@ -11,11 +11,11 @@ import { SolverService } from './services/solvers/solver.service';
   styles: [],
 })
 export class AppComponent implements OnInit {
-  currentSolvers = [1];
+  currentSolvers = [1, 2];
   selectedDay: string;
   selectedPart: string;
-  testStatus?: Status;
-  solveStatus?: Status;
+  testStatus: Status;
+  solveStatus: Status;
   isTesting: boolean;
   isSolving: boolean;
   runningTime: number;
@@ -34,6 +34,7 @@ export class AppComponent implements OnInit {
 
   solve() {
     this.isSolving = true;
+    this.runningTime = 0;
     this.runningInterval = setInterval(() => {
       this.runningTime += 0.01;
     }, 10);
