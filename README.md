@@ -1,6 +1,6 @@
 
 
-# Advent of Code 2021 sovler built with Angular
+# Advent of Code 2021 solver built with Angular
 
 | Day | Status |
 | --- | --- |
