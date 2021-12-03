@@ -2,30 +2,30 @@
 
 # Advent of Code 2021 solver built with Angular
 
-| Day | Status |
-| --- | --- |
-| 1 | :white_check_mark: |
-| 2 | :white_check_mark: |
-| 3 | :hourglass: |
-| 4 | :hourglass: |
-| 5 | :hourglass: |
-| 6 | :hourglass: |
-| 7 | :hourglass: |
-| 8 | :hourglass: |
-| 9 | :hourglass: |
-| 10 | :hourglass: |
-| 11 | :hourglass: |
-| 12 | :hourglass: |
-| 13 | :hourglass: |
-| 14 | :hourglass: |
-| 15 | :hourglass: |
-| 16 | :hourglass: |
-| 17 | :hourglass: |
-| 18 | :hourglass: |
-| 19 | :hourglass: |
-| 20 | :hourglass: |
-| 21 | :hourglass: |
-| 22 | :hourglass: |
-| 23 | :hourglass: |
-| 24 | :hourglass: |
-| 25 | :hourglass: |
+| Day | Part 1 | Part 2 |
+| --- | --- | --- |
+| 1 | :white_check_mark: | :white_check_mark: |
+| 2 | :white_check_mark: | :white_check_mark: |
+| 3 | :white_check_mark: | :white_check_mark: |
+| 4 | :hourglass: | :hourglass: |
+| 5 | :hourglass: | :hourglass: |
+| 6 | :hourglass: | :hourglass: |
+| 7 | :hourglass: | :hourglass: |
+| 8 | :hourglass: | :hourglass: |
+| 9 | :hourglass: | :hourglass: |
+| 10 | :hourglass: | :hourglass: |
+| 11 | :hourglass: | :hourglass: |
+| 12 | :hourglass: | :hourglass: |
+| 13 | :hourglass: | :hourglass: |
+| 14 | :hourglass: | :hourglass: |
+| 15 | :hourglass: | :hourglass: |
+| 16 | :hourglass: | :hourglass: |
+| 17 | :hourglass: | :hourglass: |
+| 18 | :hourglass: | :hourglass: |
+| 19 | :hourglass: | :hourglass: |
+| 20 | :hourglass: | :hourglass: |
+| 21 | :hourglass: | :hourglass: |
+| 22 | :hourglass: | :hourglass: |
+| 23 | :hourglass: | :hourglass: |
+| 24 | :hourglass: | :hourglass: |
+| 25 | :hourglass: | :hourglass: |

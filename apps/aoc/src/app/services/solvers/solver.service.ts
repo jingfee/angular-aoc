@@ -3,6 +3,7 @@ import { Observable } from 'rxjs';
 import { Status } from '../../models/status.model';
 import { Day1Solver } from './day1.solver';
 import { Day2Solver } from './day2.solver';
+import { Day3Solver } from './day3.solver';
 
 @Injectable({
   providedIn: 'root',
@@ -43,6 +44,10 @@ export class SolverService {
       }
       case 2: {
         service = this.injector.get(Day2Solver);
+        break;
+      }
+      case 3: {
+        service = this.injector.get(Day3Solver);
         break;
       }
       default: {
