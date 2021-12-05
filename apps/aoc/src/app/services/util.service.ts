@@ -9,7 +9,7 @@ export class UtilService {
   }
 
   rowInputToStringArray(input: string): string[] {
-    return input.split('\n');
+    return input.split('\n').filter((x) => x !== '');
   }
 
   rowInputToNumberArray(input: string): number[] {

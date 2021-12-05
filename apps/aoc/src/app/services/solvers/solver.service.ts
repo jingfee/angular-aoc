@@ -4,6 +4,8 @@ import { Status } from '../../models/status.model';
 import { Day1Solver } from './day1.solver';
 import { Day2Solver } from './day2.solver';
 import { Day3Solver } from './day3.solver';
+import { Day4Solver } from './day4.solver';
+import { Day5Solver } from './day5.solver';
 
 @Injectable({
   providedIn: 'root',
@@ -48,6 +50,14 @@ export class SolverService {
       }
       case 3: {
         service = this.injector.get(Day3Solver);
+        break;
+      }
+      case 4: {
+        service = this.injector.get(Day4Solver);
+        break;
+      }
+      case 5: {
+        service = this.injector.get(Day5Solver);
         break;
       }
       default: {
