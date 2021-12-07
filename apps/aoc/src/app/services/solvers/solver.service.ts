@@ -6,6 +6,8 @@ import { Day2Solver } from './day2.solver';
 import { Day3Solver } from './day3.solver';
 import { Day4Solver } from './day4.solver';
 import { Day5Solver } from './day5.solver';
+import { Day6Solver } from './day6.solver';
+import { Day7Solver } from './day7.solver';
 
 @Injectable({
   providedIn: 'root',
@@ -58,6 +60,14 @@ export class SolverService {
       }
       case 5: {
         service = this.injector.get(Day5Solver);
+        break;
+      }
+      case 6: {
+        service = this.injector.get(Day6Solver);
+        break;
+      }
+      case 7: {
+        service = this.injector.get(Day7Solver);
         break;
       }
       default: {
