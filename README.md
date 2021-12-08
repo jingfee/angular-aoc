@@ -9,9 +9,9 @@
 | 3 | :white_check_mark: | :white_check_mark: |
 | 4 | :white_check_mark: | :white_check_mark: |
 | 5 | :white_check_mark: | :white_check_mark: |
-| 6 | :hourglass: | :hourglass: |
-| 7 | :hourglass: | :hourglass: |
-| 8 | :hourglass: | :hourglass: |
+| 6 | :white_check_mark: | :white_check_mark: |
+| 7 | :white_check_mark: | :white_check_mark: |
+| 8 | :white_check_mark: | :hourglass: |
 | 9 | :hourglass: | :hourglass: |
 | 10 | :hourglass: | :hourglass: |
 | 11 | :hourglass: | :hourglass: |
