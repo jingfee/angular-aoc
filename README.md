@@ -12,7 +12,7 @@
 | 6 | :white_check_mark: | :white_check_mark: |
 | 7 | :white_check_mark: | :white_check_mark: |
 | 8 | :white_check_mark: | :white_check_mark: |
-| 9 | :hourglass: | :hourglass: |
+| 9 | :white_check_mark: | :white_check_mark: |
 | 10 | :hourglass: | :hourglass: |
 | 11 | :hourglass: | :hourglass: |
 | 12 | :hourglass: | :hourglass: |
