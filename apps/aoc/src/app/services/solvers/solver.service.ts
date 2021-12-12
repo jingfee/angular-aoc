@@ -4,6 +4,7 @@ import { Status } from '../../models/status.model';
 import { Day1Solver } from './day1.solver';
 import { Day10Solver } from './day10.solver.ts';
 import { Day11Solver } from './day11.solver';
+import { Day12Solver } from './day12.solver';
 import { Day2Solver } from './day2.solver';
 import { Day3Solver } from './day3.solver';
 import { Day4Solver } from './day4.solver';
@@ -88,6 +89,10 @@ export class SolverService {
       }
       case 11: {
         service = this.injector.get(Day11Solver);
+        break;
+      }
+      case 12: {
+        service = this.injector.get(Day12Solver);
         break;
       }
       default: {
