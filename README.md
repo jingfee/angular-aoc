@@ -16,7 +16,7 @@
 | 10 | :white_check_mark: | :white_check_mark: |
 | 11 | :white_check_mark: | :white_check_mark: |
 | 12 | :white_check_mark: | :white_check_mark: |
-| 13 | :hourglass: | :hourglass: |
+| 13 | :white_check_mark: | :white_check_mark: |
 | 14 | :hourglass: | :hourglass: |
 | 15 | :hourglass: | :hourglass: |
 | 16 | :hourglass: | :hourglass: |
