@@ -11,7 +11,7 @@ import { SolverService } from './services/solvers/solver.service';
   styles: [],
 })
 export class AppComponent implements OnInit {
-  currentSolvers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13];
+  currentSolvers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14];
   selectedDay: string;
   selectedPart: string;
   testStatus: Status;
