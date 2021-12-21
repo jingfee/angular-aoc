@@ -20,7 +20,7 @@
 | 14 | :white_check_mark: | :white_check_mark: |
 | 15 | :white_check_mark: | :white_check_mark: |
 | 16 | :white_check_mark: | :white_check_mark: |
-| 17 | :hourglass: | :hourglass: |
+| 17 | :white_check_mark: | :white_check_mark: |
 | 18 | :hourglass: | :hourglass: |
 | 19 | :hourglass: | :hourglass: |
 | 20 | :hourglass: | :hourglass: |
