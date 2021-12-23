@@ -19,7 +19,7 @@
             "inlineStyleLanguage": "scss",
             "assets": ["apps/aoc/src/favicon.ico", "apps/aoc/src/assets"],
             "styles": ["apps/aoc/src/styles.scss"],
-            "scripts": []
+            "scripts": ["node_modules/reflect-metadata/Reflect.js"]
           },
           "configurations": {
             "production": {

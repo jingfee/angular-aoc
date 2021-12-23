@@ -26,6 +26,7 @@
     "@ngneat/cashew": "^2.3.2",
     "@ngneat/until-destroy": "^9.0.0",
     "@nrwl/angular": "13.2.1",
+    "class-transformer": "^0.5.1",
     "heapify": "^0.4.0",
     "reflect-metadata": "^0.1.13",
     "rxjs": "^7.4.0",
