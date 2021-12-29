@@ -44,6 +44,7 @@ specifiers:
   class-transformer: ^0.5.1
   eslint: 7.32.0
   eslint-config-prettier: 8.1.0
+  heap: ^0.2.7
   heapify: ^0.4.0
   jest: 27.2.3
   jest-preset-angular: 11.0.0-rc.3
@@ -73,6 +74,7 @@ dependencies:
   '@ngneat/until-destroy': 9.0.0_@angular+core@13.0.2+rxjs@7.4.0
   '@nrwl/angular': 13.2.1_bc4d034640ef0208dd45731c0178e70c
   class-transformer: 0.5.1
+  heap: 0.2.7
   heapify: 0.4.0
   reflect-metadata: 0.1.13
   rxjs: 7.4.0
@@ -5491,6 +5493,10 @@ packages:
   /hdr-histogram-percentiles-obj/3.0.0:
     resolution: {integrity: sha512-7kIufnBqdsBGcSZLPJwqHT3yhk1QTsSlFsVD3kx5ixH/AlgBs9yM1q6DPhXZ8f8gtdqgh7N7/5btRLpQsS2gHw==}
     dev: true
+
+  /heap/0.2.7:
+    resolution: {integrity: sha512-2bsegYkkHO+h/9MGbn6KWcE45cHZgPANo5LXF7EvWdT0yT2EguSVO1nDgU5c8+ZOPwp2vMNa7YFsJhVcDR9Sdg==}
+    dev: false
 
   /heapify/0.4.0:
     resolution: {integrity: sha512-vNb/lMpITi80EH0mUNoAOUromDvNJGIbGZhbGKpQbSdXYWMNxsujsmgMlW6HFd25VTI8Sq+Am9wqkSRYfOxPyQ==}

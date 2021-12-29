@@ -26,6 +26,6 @@
 | 20 | :white_check_mark: | :white_check_mark: |
 | 21 | :white_check_mark: | :white_check_mark: |
 | 22 | :white_check_mark: | :white_check_mark: |
-| 23 | :hourglass: | :hourglass: |
+| 23 | :white_check_mark: | :white_check_mark: |
 | 24 | :hourglass: | :hourglass: |
 | 25 | :hourglass: | :hourglass: |

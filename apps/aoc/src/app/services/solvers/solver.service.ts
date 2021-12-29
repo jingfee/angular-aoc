@@ -16,6 +16,7 @@ import { Day2Solver } from './day2.solver';
 import { Day20Solver } from './day20.solver';
 import { Day21Solver } from './day21.solver';
 import { Day22Solver } from './day22.solver';
+import { Day23Solver } from './day23.solver';
 import { Day3Solver } from './day3.solver';
 import { Day4Solver } from './day4.solver';
 import { Day5Solver } from './day5.solver';
@@ -143,6 +144,10 @@ export class SolverService {
       }
       case 22: {
         service = this.injector.get(Day22Solver);
+        break;
+      }
+      case 23: {
+        service = this.injector.get(Day23Solver);
         break;
       }
       default: {
