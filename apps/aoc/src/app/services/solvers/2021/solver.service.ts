@@ -1,6 +1,6 @@
 import { Injectable, Injector } from '@angular/core';
 import { Observable } from 'rxjs';
-import { Status } from '../../models/status.model';
+import { Status } from '../../../models/status.model';
 import { Day1Solver } from './day1.solver';
 import { Day10Solver } from './day10.solver';
 import { Day11Solver } from './day11.solver';
@@ -30,7 +30,7 @@ import { Day9Solver } from './day9.solver';
 @Injectable({
   providedIn: 'root',
 })
-export class SolverService {
+export class Solver2021Service {
   constructor(private injector: Injector) {}
 
   solve(day: number, part: 1 | 2): Observable<Status> {

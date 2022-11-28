@@ -1,8 +1,8 @@
 import { Injectable } from '@angular/core';
 import { Observable, of, switchMap } from 'rxjs';
-import { Status } from '../../models/status.model';
-import { AocClientService } from '../aoc-client.service';
-import { UtilService } from '../util.service';
+import { Status } from '../../../models/status.model';
+import { AocClientService } from '../../aoc-client.service';
+import { UtilService } from '../../util.service';
 import { IDaySolver } from './solver.service';
 
 @Injectable({
@@ -16,7 +16,7 @@ export class Day24Solver implements IDaySolver {
 
   solve_part_one(): Observable<Status> {
     return this.aocClient.getInput(2021, 24).pipe(
-      switchMap((input) => {
+      switchMap(() => {
         const pairs = this.findModelNumbers();
         const result = this.findHighestModelNumber(pairs);
         return this.aocClient.postAnswer(2021, 24, 1, result);
@@ -26,7 +26,7 @@ export class Day24Solver implements IDaySolver {
 
   solve_part_two(): Observable<Status> {
     return this.aocClient.getInput(2021, 24).pipe(
-      switchMap((input) => {
+      switchMap(() => {
         const pairs = this.findModelNumbers();
         const result = this.findLowestModelNumber(pairs);
         return this.aocClient.postAnswer(2021, 24, 2, result);

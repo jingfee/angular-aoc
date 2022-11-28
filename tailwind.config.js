@@ -1,6 +1,6 @@
 module.exports = {
-  purge: [],
-  darkMode: false, // or 'media' or 'class'
+  content: ["./apps/aoc/src/**/*.{html,ts}"],
+  media: false, // or 'media' or 'class'
   theme: {
     extend: {
       fontFamily: {

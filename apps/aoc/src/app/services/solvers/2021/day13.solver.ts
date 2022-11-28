@@ -1,8 +1,8 @@
 import { Injectable } from '@angular/core';
 import { Observable, of, switchMap } from 'rxjs';
-import { Status } from '../../models/status.model';
-import { AocClientService } from '../aoc-client.service';
-import { UtilService } from '../util.service';
+import { Status } from '../../../models/status.model';
+import { AocClientService } from '../../aoc-client.service';
+import { UtilService } from '../../util.service';
 import { IDaySolver } from './solver.service';
 
 @Injectable({

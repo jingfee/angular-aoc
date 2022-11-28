@@ -1,8 +1,8 @@
 import { Injectable } from '@angular/core';
 import { Observable, of, switchMap } from 'rxjs';
-import { Status } from '../../models/status.model';
-import { AocClientService } from '../aoc-client.service';
-import { UtilService } from '../util.service';
+import { Status } from '../../../models/status.model';
+import { AocClientService } from '../../aoc-client.service';
+import { UtilService } from '../../util.service';
 import { IDaySolver } from './solver.service';
 
 @Injectable({
@@ -30,7 +30,7 @@ export class Day11Solver implements IDaySolver {
       switchMap((input) => {
         const initialLevels = this.utilService.rowInputToStringArray(input);
         const octopuses = this.parseOctopuses(initialLevels);
-        const result = this.simulate(octopuses, Number.MAX_VALUE, true);
+        const result = this.simulate(octopuses, Number.MAX_VALUE);
         return this.aocClient.postAnswer(2021, 11, 2, result);
       })
     );
@@ -67,7 +67,7 @@ export class Day11Solver implements IDaySolver {
       '4846848554',
       '5283751526',
     ]);
-    const test = this.simulate(octopuses, Number.MAX_VALUE, true) === 195;
+    const test = this.simulate(octopuses, Number.MAX_VALUE) === 195;
 
     return test ? of(Status.SOLVED) : of(Status.ERROR);
   }
@@ -104,11 +104,7 @@ export class Day11Solver implements IDaySolver {
     return octopuses;
   }
 
-  private simulate(
-    octopuses: Octopus[],
-    steps: number,
-    breakAtFirstSyncFlash: boolean = false
-  ): number {
+  private simulate(octopuses: Octopus[], steps: number): number {
     let flashes = 0;
 
     for (let i = 0; i < steps; i++) {

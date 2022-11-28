@@ -1,6 +1,6 @@
 <div class="max-w-screen-lg mx-auto px-4">
   <p class="text-lg text-white font-bold">
-    Advent of Code 2021 solver built with Angular
+    Advent of Code {{ currentYear }} solver built with Angular
   </p>
   <div class="block my-5">
     <select
@@ -14,7 +14,7 @@
       "
       [(ngModel)]="selectedDay"
     >
-      <option *ngFor="let day of currentSolvers">
+      <option *ngFor="let day of currentSolvers[currentYear]">
         {{ day }}
       </option>
     </select>

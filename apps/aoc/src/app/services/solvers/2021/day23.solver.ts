@@ -1,8 +1,8 @@
 import { Injectable } from '@angular/core';
 import { Observable, of, switchMap } from 'rxjs';
-import { Status } from '../../models/status.model';
-import { AocClientService } from '../aoc-client.service';
-import { UtilService } from '../util.service';
+import { Status } from '../../../models/status.model';
+import { AocClientService } from '../../aoc-client.service';
+import { UtilService } from '../../util.service';
 import { IDaySolver } from './solver.service';
 import Heap from 'heap';
 
@@ -17,7 +17,7 @@ export class Day23Solver implements IDaySolver {
 
   solve_part_one(): Observable<Status> {
     return this.aocClient.getInput(2021, 23).pipe(
-      switchMap((input) => {
+      switchMap(() => {
         const pods = [
           new Amphipod(1, 4, 1, 2, false),
           new Amphipod(1, 4, 2, 2, false),
@@ -36,7 +36,7 @@ export class Day23Solver implements IDaySolver {
 
   solve_part_two(): Observable<Status> {
     return this.aocClient.getInput(2021, 23).pipe(
-      switchMap((input) => {
+      switchMap(() => {
         const pods = [
           new Amphipod(1, 4, 1, 2, false),
           new Amphipod(1, 4, 4, 2, false),

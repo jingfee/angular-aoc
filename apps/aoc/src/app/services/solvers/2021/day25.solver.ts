@@ -1,8 +1,8 @@
 import { Injectable } from '@angular/core';
 import { Observable, of, switchMap } from 'rxjs';
-import { Status } from '../../models/status.model';
-import { AocClientService } from '../aoc-client.service';
-import { UtilService } from '../util.service';
+import { Status } from '../../../models/status.model';
+import { AocClientService } from '../../aoc-client.service';
+import { UtilService } from '../../util.service';
 import { IDaySolver } from './solver.service';
 
 @Injectable({
@@ -28,7 +28,7 @@ export class Day25Solver implements IDaySolver {
 
   solve_part_two(): Observable<Status> {
     return this.aocClient.getInput(2021, 25).pipe(
-      switchMap((input) => {
+      switchMap(() => {
         return this.aocClient.postAnswer(2021, 25, 2, '');
       })
     );

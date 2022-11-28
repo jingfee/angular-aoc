@@ -2,7 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import { UntilDestroy, untilDestroyed } from '@ngneat/until-destroy';
 import { finalize } from 'rxjs';
 import { Status } from './models/status.model';
-import { SolverService } from './services/solvers/solver.service';
+import { Solver2021Service } from './services/solvers/2021/solver.service';
+import { Solver2022Service } from './services/solvers/2022/solver.service';
 
 @UntilDestroy()
 @Component({
@@ -11,10 +12,13 @@ import { SolverService } from './services/solvers/solver.service';
   styles: [],
 })
 export class AppComponent implements OnInit {
-  currentSolvers = [
-    1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21,
-    22, 23, 24, 25,
-  ];
+  currentSolvers = {
+    2021: [
+      1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21,
+      22, 23, 24, 25,
+    ],
+    2022: [1],
+  };
   selectedDay: string;
   selectedPart: string;
   testStatus: Status;
@@ -24,14 +28,28 @@ export class AppComponent implements OnInit {
   runningTime: number;
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
   runningInterval: any;
+  currentYear = 2022;
 
   Status = Status;
 
-  constructor(private solver: SolverService) {}
+  get solver() {
+    return this.currentYear === 2022
+      ? this.solver2022
+      : this.currentYear === 2021
+      ? this.solver2021
+      : undefined;
+  }
+
+  constructor(
+    private solver2021: Solver2021Service,
+    private solver2022: Solver2022Service
+  ) {}
 
   ngOnInit() {
     this.selectedDay =
-      this.currentSolvers[this.currentSolvers.length - 1].toString();
+      this.currentSolvers[this.currentYear][
+        this.currentSolvers[this.currentYear].length - 1
+      ].toString();
     this.selectedPart = '1';
   }
 

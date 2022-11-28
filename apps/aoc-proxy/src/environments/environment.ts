@@ -1,5 +1,5 @@
 export const environment = {
   production: false,
   token:
-    '53616c7465645f5fbe1d361a0441aec0b6aea8c0bb8a72f84e5187d02dae056ad09e7b9286f1a1f1480eb5bf8ffae197',
+    '53616c7465645f5f5e0d82bb4cfcd83d17283a055ad463243eed3c5de29da52715bd101b1895d9f0bd81a092844a7fdbcfd7557e4f5fd4ce6bdbc7e81f86a92f',
 };

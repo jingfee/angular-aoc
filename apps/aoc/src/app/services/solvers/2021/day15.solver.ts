@@ -1,10 +1,10 @@
 import { Injectable } from '@angular/core';
 import { Observable, of, switchMap } from 'rxjs';
-import { Status } from '../../models/status.model';
-import { AocClientService } from '../aoc-client.service';
-import { UtilService } from '../util.service';
+import { Status } from '../../../models/status.model';
+import { AocClientService } from '../../aoc-client.service';
+import { UtilService } from '../../util.service';
 import { IDaySolver } from './solver.service';
-import Heapify from 'heapify/heapify.js';
+import { MinQueue } from 'heapify/heapify.js';
 
 @Injectable({
   providedIn: 'root',
@@ -89,7 +89,7 @@ export class Day15Solver implements IDaySolver {
 
   private findShortestRoute(map: number[][], start: number, end: number) {
     const distance = [];
-    const queue = new Heapify(end);
+    const queue = new MinQueue(end);
     for (let y = 0; y < map.length; y++) {
       for (let x = 0; x < map.length; x++) {
         const neighbours = [];
@@ -137,7 +137,7 @@ export class Day15Solver implements IDaySolver {
     end: number
   ) {
     const distance = [];
-    const queue = new Heapify(end);
+    const queue = new MinQueue(end);
     for (let y = 0; y < map.length * 5; y++) {
       for (let x = 0; x < map.length * 5; x++) {
         const neighbours = [];
