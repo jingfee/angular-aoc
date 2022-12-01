@@ -12,8 +12,11 @@ export class UtilService {
     return input.split(',').map((i) => Number.parseInt(i));
   }
 
-  rowInputToStringArray(input: string): string[] {
-    return input.split('\n').filter((x) => x !== '');
+  rowInputToStringArray(
+    input: string,
+    includeEmpty: boolean = false
+  ): string[] {
+    return input.split('\n').filter((x) => (includeEmpty ? true : x !== ''));
   }
 
   rowInputToNumberArray(input: string): number[] {

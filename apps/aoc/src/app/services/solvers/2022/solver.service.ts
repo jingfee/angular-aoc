@@ -1,7 +1,7 @@
 import { Injectable, Injector } from '@angular/core';
 import { Observable } from 'rxjs';
 import { Status } from '../../../models/status.model';
-// import { Day1Solver } from './day1.solver';
+import { Day1Solver } from './day1.solver';
 // import { Day10Solver } from './day10.solver';
 // import { Day11Solver } from './day11.solver';
 // import { Day12Solver } from './day12.solver';
@@ -60,10 +60,10 @@ export class Solver2022Service {
     let service: IDaySolver;
 
     switch (day) {
-      // case 1: {
-      //   service = this.injector.get(Day1Solver);
-      //   break;
-      // }
+      case 1: {
+        service = this.injector.get(Day1Solver);
+        break;
+      }
       // case 2: {
       //   service = this.injector.get(Day2Solver);
       //   break;
