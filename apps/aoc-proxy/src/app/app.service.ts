@@ -12,7 +12,11 @@ export class AppService {
 
     return this.httpService
       .get(url, {
-        headers: { cookie: `session=${environment.token}` },
+        headers: {
+          cookie: `session=${environment.token}`,
+          'user-agent':
+            'https://github.com/jingfee/angular-aoc by jingfee@gmail.com',
+        },
       })
       .pipe(
         map((response) => {
@@ -35,6 +39,8 @@ export class AppService {
         headers: {
           cookie: `session=${environment.token}`,
           'content-type': 'application/x-www-form-urlencoded',
+          'user-agent':
+            'https://github.com/jingfee/angular-aoc by jingfee@gmail.com',
         },
       })
       .pipe(
