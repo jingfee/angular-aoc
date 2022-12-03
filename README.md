@@ -8,7 +8,7 @@
 | --- | --- | --- |
 | 1 | :white_check_mark: | :white_check_mark: |
 | 2 | :white_check_mark: | :white_check_mark: |
-| 3 |  |  |
+| 3 | :white_check_mark: | :white_check_mark: |
 | 4 |  |  |
 | 5 |  |  |
 | 6 |  |  |
