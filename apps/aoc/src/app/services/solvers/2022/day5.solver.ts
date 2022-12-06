@@ -1,5 +1,4 @@
 import { Injectable } from '@angular/core';
-import { parse } from 'path';
 import { Observable, of, switchMap } from 'rxjs';
 import { Status } from '../../../models/status.model';
 import { AocClientService } from '../../aoc-client.service';
