@@ -22,4 +22,11 @@ export class UtilService {
   rowInputToNumberArray(input: string): number[] {
     return input.split('\n').map((i) => Number.parseInt(i));
   }
+
+  rowInputToNumberMatrix(input: string): number[][] {
+    return input
+      .split('\n')
+      .map((i) => i.split('').map((j) => Number.parseInt(j)))
+      .filter((a) => a.length > 0);
+  }
 }

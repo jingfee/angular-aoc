@@ -24,7 +24,7 @@ import { Day4Solver } from './day4.solver';
 import { Day5Solver } from './day5.solver';
 import { Day6Solver } from './day6.solver';
 import { Day7Solver } from './day7.solver';
-// import { Day8Solver } from './day8.solver';
+import { Day8Solver } from './day8.solver';
 // import { Day9Solver } from './day9.solver';
 
 @Injectable({
@@ -88,10 +88,10 @@ export class Solver2022Service {
         service = this.injector.get(Day7Solver);
         break;
       }
-      // case 8: {
-      //   service = this.injector.get(Day8Solver);
-      //   break;
-      // }
+      case 8: {
+        service = this.injector.get(Day8Solver);
+        break;
+      }
       // case 9: {
       //   service = this.injector.get(Day9Solver);
       //   break;
