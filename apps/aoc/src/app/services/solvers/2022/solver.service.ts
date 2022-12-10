@@ -2,7 +2,7 @@ import { Injectable, Injector } from '@angular/core';
 import { Observable } from 'rxjs';
 import { Status } from '../../../models/status.model';
 import { Day1Solver } from './day1.solver';
-// import { Day10Solver } from './day10.solver';
+import { Day10Solver } from './day10.solver';
 // import { Day11Solver } from './day11.solver';
 // import { Day12Solver } from './day12.solver';
 // import { Day13Solver } from './day13.solver';
@@ -96,10 +96,10 @@ export class Solver2022Service {
         service = this.injector.get(Day9Solver);
         break;
       }
-      // case 10: {
-      //   service = this.injector.get(Day10Solver);
-      //   break;
-      // }
+      case 10: {
+        service = this.injector.get(Day10Solver);
+        break;
+      }
       // case 11: {
       //   service = this.injector.get(Day11Solver);
       //   break;
