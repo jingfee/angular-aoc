@@ -4,7 +4,7 @@ import { Status } from '../../../models/status.model';
 import { Day1Solver } from './day1.solver';
 import { Day10Solver } from './day10.solver';
 import { Day11Solver } from './day11.solver';
-// import { Day12Solver } from './day12.solver';
+import { Day12Solver } from './day12.solver';
 // import { Day13Solver } from './day13.solver';
 // import { Day14Solver } from './day14.solver';
 // import { Day15Solver } from './day15.solver';
@@ -104,10 +104,10 @@ export class Solver2022Service {
         service = this.injector.get(Day11Solver);
         break;
       }
-      // case 12: {
-      //   service = this.injector.get(Day12Solver);
-      //   break;
-      // }
+      case 12: {
+        service = this.injector.get(Day12Solver);
+        break;
+      }
       // case 13: {
       //   service = this.injector.get(Day13Solver);
       //   break;
