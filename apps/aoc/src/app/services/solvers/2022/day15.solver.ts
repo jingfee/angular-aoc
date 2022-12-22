@@ -84,7 +84,6 @@ export class Day15Solver implements IDaySolver {
       'Sensor at x=20, y=1: closest beacon is at x=15, y=3',
     ]);
     const test = this.getFreeSlot(parsed.sensors, 20) === 56000011;
-    console.log('hej');
 
     return test ? of(Status.SOLVED) : of(Status.ERROR);
   }
