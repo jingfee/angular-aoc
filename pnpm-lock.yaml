@@ -49,6 +49,7 @@ specifiers:
   jest-environment-jsdom: 28.1.1
   jest-preset-angular: 12.2.3
   js-combinatorics: ^2.1.1
+  lodash: ^4.17.21
   nx: 15.2.1
   prettier: 2.8.0
   reflect-metadata: ^0.1.13
@@ -80,6 +81,7 @@ dependencies:
   heap: 0.2.7
   heapify: 0.6.0
   js-combinatorics: 2.1.1
+  lodash: 4.17.21
   reflect-metadata: 0.1.13
   rxjs: 7.5.7
   tinyqueue: 2.0.3
