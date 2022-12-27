@@ -14,7 +14,7 @@ import { Day18Solver } from './day18.solver';
 import { Day19Solver } from './day19.solver';
 import { Day2Solver } from './day2.solver';
 import { Day20Solver } from './day20.solver';
-// import { Day21Solver } from './day21.solver';
+import { Day21Solver } from './day21.solver';
 // import { Day22Solver } from './day22.solver';
 // import { Day23Solver } from './day23.solver';
 // import { Day24Solver } from './day24.solver';
@@ -140,10 +140,10 @@ export class Solver2022Service {
         service = this.injector.get(Day20Solver);
         break;
       }
-      // case 21: {
-      //   service = this.injector.get(Day21Solver);
-      //   break;
-      // }
+      case 21: {
+        service = this.injector.get(Day21Solver);
+        break;
+      }
       // case 22: {
       //   service = this.injector.get(Day22Solver);
       //   break;
