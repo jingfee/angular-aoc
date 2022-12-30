@@ -17,8 +17,8 @@ import { Day20Solver } from './day20.solver';
 import { Day21Solver } from './day21.solver';
 import { Day22Solver } from './day22.solver';
 import { Day23Solver } from './day23.solver';
-// import { Day24Solver } from './day24.solver';
-// import { Day25Solver } from './day25.solver';
+import { Day24Solver } from './day24.solver';
+import { Day25Solver } from './day25.solver';
 import { Day3Solver } from './day3.solver';
 import { Day4Solver } from './day4.solver';
 import { Day5Solver } from './day5.solver';
@@ -152,14 +152,14 @@ export class Solver2022Service {
         service = this.injector.get(Day23Solver);
         break;
       }
-      // case 24: {
-      //   service = this.injector.get(Day24Solver);
-      //   break;
-      // }
-      // case 25: {
-      //   service = this.injector.get(Day25Solver);
-      //   break;
-      // }
+      case 24: {
+        service = this.injector.get(Day24Solver);
+        break;
+      }
+      case 25: {
+        service = this.injector.get(Day25Solver);
+        break;
+      }
       default: {
         throw `No solver implemented for day: ${day}`;
       }

@@ -49,6 +49,7 @@ specifiers:
   jest-environment-jsdom: 28.1.1
   jest-preset-angular: 12.2.3
   js-combinatorics: ^2.1.1
+  lite-fifo: ^0.3.1
   lodash: ^4.17.21
   nx: 15.2.1
   prettier: 2.8.0
@@ -81,6 +82,7 @@ dependencies:
   heap: 0.2.7
   heapify: 0.6.0
   js-combinatorics: 2.1.1
+  lite-fifo: 0.3.1
   lodash: 4.17.21
   reflect-metadata: 0.1.13
   rxjs: 7.5.7
@@ -7168,6 +7170,10 @@ packages:
 
   /lines-and-columns/1.1.6:
     resolution: {integrity: sha512-8ZmlJFVK9iCmtLz19HpSsR8HaAMWBT284VMNednLwlIMDP2hJDCIhUp0IZ2xUcZ+Ob6BM0VvCSJwzASDM45NLQ==}
+
+  /lite-fifo/0.3.1:
+    resolution: {integrity: sha512-7h+Kskb7ipGjAb1kAyjVRMtD5qVgn3ugA88NbKYB5IeYNzawpZRQnMoMZJdV7GYEOUVik6BpUuEpaQuB3zjqRA==}
+    dev: false
 
   /loader-runner/4.2.0:
     resolution: {integrity: sha512-92+huvxMvYlMzMt0iIOukcwYBFpkYJdpl2xsZ7LrlayO7E8SOv+JJUEK17B/dJIHAOLMfh2dZZ/Y18WgmGtYNw==}
