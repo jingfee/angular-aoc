@@ -30,7 +30,7 @@
 | 22 | :clock3: | :clock3: |
 | 23 | :clock3: | :clock3: |
 | 24 | :clock3: | :clock3: |
-| 25 | :clock3: | :white_check_mark: |
+| 25 | :clock3: | :clock3: |
 
 ## 2022
 
