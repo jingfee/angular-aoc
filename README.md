@@ -1,6 +1,36 @@
 
 
-# Advent of Code 2021 - 2022 solver built with Angular
+# Advent of Code 2021 - 2023 solver built with Angular
+
+## 2023
+
+| Day | Part 1 | Part 2 |
+| --- | --- | --- |
+| 1 | :clock3: | :clock3: |
+| 2 | :clock3: | :clock3: |
+| 3 | :clock3: | :clock3: |
+| 4 | :clock3: | :clock3: |
+| 5 | :clock3: | :clock3: |
+| 6 | :clock3: | :clock3: |
+| 7 | :clock3: | :clock3: |
+| 8 | :clock3: | :clock3: |
+| 9 | :clock3: | :clock3: |
+| 10 | :clock3: | :clock3: |
+| 11 | :clock3: | :clock3: |
+| 12 | :clock3: | :clock3: |
+| 13 | :clock3: | :clock3: |
+| 14 | :clock3: | :clock3: |
+| 15 | :clock3: | :clock3: |
+| 16 | :clock3: | :clock3: |
+| 17 | :clock3: | :clock3: |
+| 18 | :clock3: | :clock3: |
+| 19 | :clock3: | :clock3: |
+| 20 | :clock3: | :clock3: |
+| 21 | :clock3: | :clock3: |
+| 22 | :clock3: | :clock3: |
+| 23 | :clock3: | :clock3: |
+| 24 | :clock3: | :clock3: |
+| 25 | :clock3: | :white_check_mark: |
 
 ## 2022
 

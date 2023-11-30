@@ -1,0 +1,54 @@
+{
+  "name": "aoc-proxy",
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "apps/aoc-proxy/src",
+  "projectType": "application",
+  "targets": {
+    "build": {
+      "executor": "@nrwl/webpack:webpack",
+      "outputs": ["{options.outputPath}"],
+      "options": {
+        "outputPath": "dist/apps/aoc-proxy",
+        "main": "apps/aoc-proxy/src/main.ts",
+        "tsConfig": "apps/aoc-proxy/tsconfig.app.json",
+        "assets": ["apps/aoc-proxy/src/assets"],
+        "target": "node",
+        "compiler": "tsc"
+      },
+      "configurations": {
+        "production": {
+          "optimization": true,
+          "extractLicenses": true,
+          "inspect": false,
+          "fileReplacements": [
+            {
+              "replace": "apps/aoc-proxy/src/environments/environment.ts",
+              "with": "apps/aoc-proxy/src/environments/environment.prod.ts"
+            }
+          ]
+        }
+      }
+    },
+    "serve": {
+      "executor": "@nx/js:node",
+      "options": {
+        "buildTarget": "aoc-proxy:build"
+      }
+    },
+    "lint": {
+      "executor": "@nx/eslint:lint",
+      "outputs": ["{options.outputFile}"],
+      "options": {
+        "lintFilePatterns": ["apps/aoc-proxy/**/*.ts"]
+      }
+    },
+    "test": {
+      "executor": "@nx/jest:jest",
+      "outputs": ["{workspaceRoot}/coverage/apps/aoc-proxy"],
+      "options": {
+        "jestConfig": "apps/aoc-proxy/jest.config.js"
+      }
+    }
+  },
+  "tags": []
+}

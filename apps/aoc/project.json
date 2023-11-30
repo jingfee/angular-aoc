@@ -1,0 +1,105 @@
+{
+  "name": "aoc",
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "projectType": "application",
+  "sourceRoot": "apps/aoc/src",
+  "prefix": "angular-aoc",
+  "targets": {
+    "build": {
+      "executor": "@angular-devkit/build-angular:browser",
+      "outputs": ["{options.outputPath}"],
+      "options": {
+        "outputPath": "dist/apps/aoc",
+        "index": "apps/aoc/src/index.html",
+        "main": "apps/aoc/src/main.ts",
+        "polyfills": "apps/aoc/src/polyfills.ts",
+        "tsConfig": "apps/aoc/tsconfig.app.json",
+        "inlineStyleLanguage": "scss",
+        "assets": ["apps/aoc/src/favicon.ico", "apps/aoc/src/assets"],
+        "styles": ["apps/aoc/src/styles.scss"],
+        "scripts": ["node_modules/reflect-metadata/Reflect.js"]
+      },
+      "configurations": {
+        "production": {
+          "budgets": [
+            {
+              "type": "initial",
+              "maximumWarning": "500kb",
+              "maximumError": "1mb"
+            },
+            {
+              "type": "anyComponentStyle",
+              "maximumWarning": "2kb",
+              "maximumError": "4kb"
+            }
+          ],
+          "fileReplacements": [
+            {
+              "replace": "apps/aoc/src/environments/environment.ts",
+              "with": "apps/aoc/src/environments/environment.prod.ts"
+            }
+          ],
+          "outputHashing": "all"
+        },
+        "development": {
+          "buildOptimizer": false,
+          "optimization": false,
+          "vendorChunk": true,
+          "extractLicenses": false,
+          "sourceMap": true,
+          "namedChunks": true
+        }
+      },
+      "defaultConfiguration": "production"
+    },
+    "serve": {
+      "executor": "@angular-devkit/build-angular:dev-server",
+      "configurations": {
+        "production": {
+          "buildTarget": "aoc:build:production"
+        },
+        "development": {
+          "buildTarget": "aoc:build:development"
+        }
+      },
+      "defaultConfiguration": "development",
+      "options": {
+        "proxyConfig": "apps/aoc/proxy.conf.json"
+      }
+    },
+    "extract-i18n": {
+      "executor": "@angular-devkit/build-angular:extract-i18n",
+      "options": {
+        "buildTarget": "aoc:build"
+      }
+    },
+    "lint": {
+      "executor": "@nx/eslint:lint",
+      "options": {
+        "lintFilePatterns": ["apps/aoc/src/**/*.ts", "apps/aoc/src/**/*.html"]
+      }
+    },
+    "test": {
+      "executor": "@nx/jest:jest",
+      "outputs": ["{workspaceRoot}/coverage/apps/aoc"],
+      "options": {
+        "jestConfig": "apps/aoc/jest.config.js"
+      }
+    },
+    "serve-with-proxy": {
+      "executor": "nx:run-commands",
+      "options": {
+        "commands": [
+          {
+            "command": "ng serve aoc-proxy"
+          },
+          {
+            "command": "ng serve aoc"
+          }
+        ],
+        "parallel": true
+      }
+    }
+  },
+  "tags": []
+}

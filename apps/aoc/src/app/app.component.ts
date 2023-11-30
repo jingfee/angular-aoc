@@ -4,6 +4,7 @@ import { finalize } from 'rxjs';
 import { Status } from './models/status.model';
 import { Solver2021Service } from './services/solvers/2021/solver.service';
 import { Solver2022Service } from './services/solvers/2022/solver.service';
+import { Solver2023Service } from './services/solvers/2023/solver.service';
 
 @UntilDestroy()
 @Component({
@@ -21,6 +22,7 @@ export class AppComponent implements OnInit {
       1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21,
       22, 23, 24, 25,
     ],
+    2023: [],
   };
   selectedDay: string;
   selectedPart: string;
@@ -36,16 +38,22 @@ export class AppComponent implements OnInit {
   Status = Status;
 
   get solver() {
-    return this.currentYear === 2022
-      ? this.solver2022
-      : this.currentYear === 2021
-      ? this.solver2021
-      : undefined;
+    switch (this.currentYear) {
+      case 2023:
+        return this.solver2023;
+      case 2022:
+        return this.solver2022;
+      case 2021:
+        return this.solver2021;
+      default:
+        return undefined;
+    }
   }
 
   constructor(
     private solver2021: Solver2021Service,
-    private solver2022: Solver2022Service
+    private solver2022: Solver2022Service,
+    private solver2023: Solver2023Service
   ) {}
 
   ngOnInit() {
