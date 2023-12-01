@@ -22,7 +22,7 @@ export class AppComponent implements OnInit {
       1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21,
       22, 23, 24, 25,
     ],
-    2023: [],
+    2023: [1],
   };
   selectedDay: string;
   selectedPart: string;
@@ -33,7 +33,7 @@ export class AppComponent implements OnInit {
   runningTime: number;
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
   runningInterval: any;
-  currentYear = 2022;
+  currentYear = 2023;
 
   Status = Status;
 
@@ -53,7 +53,7 @@ export class AppComponent implements OnInit {
   constructor(
     private solver2021: Solver2021Service,
     private solver2022: Solver2022Service,
-    private solver2023: Solver2023Service
+    private solver2023: Solver2023Service,
   ) {}
 
   ngOnInit() {
@@ -73,14 +73,14 @@ export class AppComponent implements OnInit {
     this.solver
       .solve(
         Number.parseInt(this.selectedDay),
-        Number.parseInt(this.selectedPart) as 1 | 2
+        Number.parseInt(this.selectedPart) as 1 | 2,
       )
       .pipe(
         finalize(() => {
           this.isSolving = false;
           clearInterval(this.runningInterval);
         }),
-        untilDestroyed(this)
+        untilDestroyed(this),
       )
       .subscribe((result) => (this.solveStatus = result));
   }
@@ -90,11 +90,11 @@ export class AppComponent implements OnInit {
     this.solver
       .test(
         Number.parseInt(this.selectedDay),
-        Number.parseInt(this.selectedPart) as 1 | 2
+        Number.parseInt(this.selectedPart) as 1 | 2,
       )
       .pipe(
         finalize(() => (this.isTesting = false)),
-        untilDestroyed(this)
+        untilDestroyed(this),
       )
       .subscribe((result) => (this.testStatus = result));
   }
