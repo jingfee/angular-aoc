@@ -7,7 +7,7 @@
 | Day | Part 1 | Part 2 |
 | --- | --- | --- |
 | 1 | :white_check_mark: | :white_check_mark: |
-| 2 | :clock3: | :clock3: |
+| 2 | :white_check_mark: | :white_check_mark: |
 | 3 | :clock3: | :clock3: |
 | 4 | :clock3: | :clock3: |
 | 5 | :clock3: | :clock3: |
