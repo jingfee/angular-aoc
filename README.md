@@ -17,8 +17,8 @@
 | 9 | :white_check_mark: | :white_check_mark: |
 | 10 | :white_check_mark: | :white_check_mark: |
 | 11 | :white_check_mark: | :white_check_mark: |
-| 12 | :white_check_mark:  | :white_check_mark:  |
-| 13 | :clock3: | :clock3: |
+| 12 | :white_check_mark: | :white_check_mark: |
+| 13 | :white_check_mark: | :white_check_mark: |
 | 14 | :clock3: | :clock3: |
 | 15 | :clock3: | :clock3: |
 | 16 | :clock3: | :clock3: |
