@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { Observable, map, of, switchMap } from 'rxjs';
+import { Observable, of, switchMap } from 'rxjs';
 import { Status } from '../../../models/status.model';
 import { AocClientService } from '../../aoc-client.service';
 import { UtilService } from '../../util.service';
