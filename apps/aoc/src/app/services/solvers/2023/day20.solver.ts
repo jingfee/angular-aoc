@@ -22,8 +22,7 @@ export class Day20Solver implements IDaySolver {
           this.utilService.rowInputToStringArray(input),
         );
         const result = this.button(parsed);
-        return of(Status.ERROR);
-        //return this.aocClient.postAnswer(2023, 20, 1, result);
+        return this.aocClient.postAnswer(2023, 20, 1, result);
       }),
     );
   }
@@ -105,7 +104,7 @@ export class Day20Solver implements IDaySolver {
       0: 0,
       1: 0,
     };
-    for (let i = 0; i < 1000; i++) {
+    for (let i = 0; i < 10000; i++) {
       const queue = new ChunkedQueue();
       const broadcaster = modules.get('broadcaster');
       broadcaster.signals['button'] = SignalType.Low;
@@ -143,6 +142,30 @@ export class Day20Solver implements IDaySolver {
         }
 
         for (const output of current.module.outputs) {
+          if (
+            signalToSend === SignalType.High &&
+            current.module.name === 'qz'
+          ) {
+            console.log('qz', i + 1);
+          }
+          if (
+            signalToSend === SignalType.High &&
+            current.module.name === 'cq'
+          ) {
+            console.log('cq', i + 1);
+          }
+          if (
+            signalToSend === SignalType.High &&
+            current.module.name === 'jx'
+          ) {
+            console.log('jx', i + 1);
+          }
+          if (
+            signalToSend === SignalType.High &&
+            current.module.name === 'tt'
+          ) {
+            console.log('tt', i + 1);
+          }
           signalCount[signalToSend]++;
           const outputModule = modules.get(output);
           if (outputModule) {
